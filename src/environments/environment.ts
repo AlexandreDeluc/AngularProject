@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_url: "https://api.punkapi.com/v2/",
+  imageApi_url: "https://images.punkapi.com/v2/"
 };
 
 /*

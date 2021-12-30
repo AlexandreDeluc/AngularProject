@@ -104,6 +104,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "webeer"
+    }
+  },
+  "defaultProject": "webeer",
+  "cli": {
+    "analytics": false
+  }
 }
