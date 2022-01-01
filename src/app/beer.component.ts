@@ -6,6 +6,7 @@ import { BeerService } from './beer.service';
 @Component({
   selector: 'beer-beer',
   template: `
+    <beer-beer-search></beer-beer-search>
     <div *ngFor="let beerUnit of beers$ | async">
       <beer-beer-display 
       [beer]="beerUnit">   

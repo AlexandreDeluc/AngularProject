@@ -11,7 +11,6 @@ import { HttpClient } from "@angular/common/http";
 export class BeerService {
 beers$: BehaviorSubject<Beer[]> = new BehaviorSubject<Beer[]>([])
 beerApiUrl:string = environment.api_url + 'beers'
-imageBeerUrl:string = environment.imageApi_url 
 
   constructor(private http: HttpClient) {
     this.http.get<Beer[]>(this.beerApiUrl)
@@ -24,4 +23,15 @@ imageBeerUrl:string = environment.imageApi_url
    getbeers(): Observable<Beer[]> {
      return this.beers$
    }
+
+   search(query: string) {
+    this.http.get<Beer[]>(
+        this.beerApiUrl,
+        { params: { beer_name: query }}
+    ).subscribe(
+        beers => {
+            this.beers$.next(beers);
+        }
+    )
+}
 }

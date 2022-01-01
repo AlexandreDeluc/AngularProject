@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { BeerComponent } from './beer.component';
 import { BeerDisplayComponent } from './beer-display.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BeerSearchComponent } from './beer-search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerComponent,
-    BeerDisplayComponent
+    BeerDisplayComponent,
+    BeerSearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

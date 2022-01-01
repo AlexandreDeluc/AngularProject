@@ -4,10 +4,13 @@ import { Beer } from './beer.model';
 @Component({
   selector: 'beer-beer-display',
   template: `
-    <div>
-    <h2>{{ beer.name }}</h2>
+    <h2>{{ beer.id }} {{ beer.name }}</h2>
+    <p>{{ beer.tagline }}</p>
       <img src="{{ beer.image_url }}" alt="">
-    </div>
+    <p>Since {{ beer.first_brewed }}</p>
+    <button [routerLink]="['/contacts', beer.id, 'edit']">Details</button>
+
+
   `,
   styles: [
   ]
