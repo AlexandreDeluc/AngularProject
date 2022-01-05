@@ -10,7 +10,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class BeerService {
 beers$: BehaviorSubject<Beer[]> = new BehaviorSubject<Beer[]>([])
-beerApiUrl:string = environment.api_url + 'beers'
+beerApiUrl:string = environment.api_url + 'beers/'
 
   constructor(private http: HttpClient) {
     this.http.get<Beer[]>(this.beerApiUrl)
@@ -23,6 +23,10 @@ beerApiUrl:string = environment.api_url + 'beers'
    getbeers(): Observable<Beer[]> {
      return this.beers$
    }
+
+   get(id: string): Observable<Beer> {
+    return this.http.get<Beer>(this.beerApiUrl + id);
+}
 
    search(query: string) {
     this.http.get<Beer[]>(

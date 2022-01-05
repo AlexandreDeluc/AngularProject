@@ -8,9 +8,11 @@ import { Beer } from './beer.model';
     <h2>{{ beer.id }}. {{ beer.name }}</h2>
     <p>{{ beer.tagline }}</p>
     <div id="biere">
-      <img src="{{ beer.image_url }}" alt="">
+      <img src="{{ beer.image_url }}" alt="{{ beer.id }}">
       <p>Since {{ beer.first_brewed }}</p>
-      <button [routerLink]="['/contacts', beer.id, 'edit']">Details</button>
+      <button
+      [routerLink]="['/beer', beer.id]">
+      Details</button>
     </div>
   </div>
 

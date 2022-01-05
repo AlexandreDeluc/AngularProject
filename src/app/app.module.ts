@@ -8,6 +8,7 @@ import { BeerDisplayComponent } from './beer-display.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BeerSearchComponent } from './beer-search.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DetailBeerComponent } from './detail-beer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BeerComponent,
     BeerDisplayComponent,
     BeerSearchComponent,
+    DetailBeerComponent,
   ],
   imports: [
     BrowserModule,
