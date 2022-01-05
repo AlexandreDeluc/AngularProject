@@ -20,6 +20,7 @@ import { Beer } from './beer.model';
     '*{font-family: sans-serif;}',
     '#block {flex-direction: column; margin-left: 30px; margin-bottom: 45px;}',
     '#biere {text-align: center;}',
+    'h2, p {}font-weight: bold}',
     '#biere img {width: 100px; height: 300px; justify-content: center;}',
     '#biere button {width: 100px;} ',
   ]
