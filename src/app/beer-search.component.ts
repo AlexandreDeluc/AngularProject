@@ -12,7 +12,7 @@ import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
     </div>
   `,
   styles: [
-    'div {text-align:center; width: auto; padding:30px;background-color:#f0ecda; border-radius: 10px;}',
+    'div {text-align:center; width: auto; padding:30px;background-color:#f0ecda; border-radius: 10px;margin-top:-0.5em;}',
     '#search {font-size: 25px; font-family: sans-serif;}',
     '#beer-search {margin-left: 10px; height: 20px; font-size: 20px;}'
   ]
