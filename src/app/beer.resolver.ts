@@ -11,13 +11,13 @@ import { BeerService } from './beer.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ContactResolver implements Resolve<Beer> {
-  constructor(private contactService: BeerService) {}
+export class BeerResolver implements Resolve<Beer> {
+  constructor(private BeerService: BeerService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Beer> {
     const id = route.paramMap.get('id')
 
     if (id) {
-      return this.contactService.get(id)
+      return this.BeerService.get(id)
     } else {
       return EMPTY;
     }

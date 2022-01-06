@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {ActivatedRoute, Data, ParamMap, Router} from "@angular/router";
 import { Beer } from './beer.model';
-import { BeerService } from './beer.service';
 
 @Component({
   selector: 'beer-detail-beer',
@@ -28,11 +27,13 @@ import { BeerService } from './beer.service';
 export class DetailBeerComponent implements OnInit {
 beer?:Beer
 
-constructor(route: ActivatedRoute, private beerservice: BeerService, private router: Router) {
+constructor(route: ActivatedRoute, private router: Router) {
   route.data.subscribe(
-      (data: Data) => {
-        if (data.beer) {
-          this.beer = data.beer;
+      (data:Data) => {
+        console.log(data)
+        if (data.b) {
+          this.beer = data.b
+          console.log("this.beer")
         }
       }
   );

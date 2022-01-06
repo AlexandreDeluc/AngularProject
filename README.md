@@ -1,4 +1,11 @@
 # Webeer
+Bonjour Monsieur, 
+Nous avons été bloqués à cause d'une erreur inconnue au moment du subscribe dans le composant DetailBeer,
+des console.log ont étés ajoutés afin de mieux repérer le probleme.
+En clair la fonction ne rentre pas dans la boucle if servant a mettre mettre les données recupérées dans l'objet de type Beer.
+
+Merci de votre comprehension
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
